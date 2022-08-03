@@ -1,5 +1,5 @@
 {
-  "name": "react-tooltip",
+  "name": "react-tooltip2",
   "version": "4.3.0",
   "description": "react tooltip component",
   "main": "dist/index.js",
@@ -151,7 +151,13 @@
       "@semantic-release/commit-analyzer",
       "@semantic-release/release-notes-generator",
       "@semantic-release/changelog",
-      "@semantic-release/npm",
+      [
+        "@semantic-release/npm",
+        {
+          "npmPublish": true,
+          "tarballDir": "dist"
+        }
+      ],
       "@semantic-release/git"
     ],
     "branch": "master"
