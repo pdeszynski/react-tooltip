@@ -1,3 +1,9 @@
+## [4.3.2](https://github.com/pdeszynski/react-tooltip/compare/v4.3.1...v4.3.2) (2022-08-03)
+
+### Bug Fixes
+
+- **readme:** udpated info in readme for examples ([767ceb0](https://github.com/pdeszynski/react-tooltip/commit/767ceb0c5cfc769974340f9aa4380e35229ace95))
+
 # [4.3.0](https://github.com/pdeszynski/react-tooltip/compare/v4.2.21...v4.3.0) (2022-08-03)
 
 ### Bug Fixes
