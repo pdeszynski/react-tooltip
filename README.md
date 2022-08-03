@@ -28,13 +28,13 @@ We would gladly accept a new maintainer to help out!
 ## Installation
 
 ```sh
-npm install react-tooltip
+npm install react-tooltip-rc
 ```
 
 or
 
 ```sh
-yarn add react-tooltip
+yarn add react-tooltip-rc
 ```
 
 ## Usage
@@ -44,7 +44,7 @@ yarn add react-tooltip
 1 . Require react-tooltip after installation
 
 ```js
-import ReactTooltip from 'react-tooltip';
+import ReactTooltip from 'react-tooltip-rc';
 ```
 
 2 . Add data-tip = "your placeholder" to your element
@@ -109,8 +109,10 @@ Notes:
 The `html` option allows a tooltip to directly display raw HTML. This is a security risk if any of that content is supplied by the user. Any user-supplied content must be sanitized, using a package like [sanitize-html](https://www.npmjs.com/package/sanitize-html). We chose not to include sanitization after discovering it [increased our package size](https://github.com/wwayne/react-tooltip/issues/429) too much - we don't want to penalize people who don't use the `html` option.
 
 #### JSX Note
+
 You can use React's [`renderToStaticMarkup`-function](https://reactjs.org/docs/react-dom-server.html#rendertostaticmarkup) to use JSX instead of HTML. You still need to set `data-html={true}`.
 **Example:**
+
 ```jsx
 import ReactDOMServer from 'react-dom/server';
 [...]
@@ -132,7 +134,7 @@ import ReactDOMServer from 'react-dom/server';
 > Hide the tooltip manually, the target is optional, if no target passed in, all existing tooltips will be hidden
 
 ```jsx
-import ReactTooltip from 'react-tooltip'
+import ReactTooltip from 'react-tooltip-rc'
 
 <p ref={ref => this.fooRef = ref} data-tip='tooltip'></p>
 <button onClick={() => { ReactTooltip.hide(this.fooRef) }}></button>
@@ -148,7 +150,7 @@ import ReactTooltip from 'react-tooltip'
 > Show specific tooltip manually, for example:
 
 ```jsx
-import ReactTooltip from 'react-tooltip'
+import ReactTooltip from 'react-tooltip-rc'
 
 <p ref={ref => this.fooRef = ref} data-tip='tooltip'></p>
 <button onClick={() => { ReactTooltip.show(this.fooRef) }}></button>
@@ -186,14 +188,14 @@ Same for empty children, if you don't want show the tooltip when the children is
 
 ### 3. Tooltip not binding to dynamic content
 
-When you render `<ReactTooltip>` ahead of dynamic content, and are using `data-for={id}` attributes 
-on new dynamic content, the tooltip will not register its event listener.  
+When you render `<ReactTooltip>` ahead of dynamic content, and are using `data-for={id}` attributes
+on new dynamic content, the tooltip will not register its event listener.
 
 For example, you render a generic tooltip in the root of your app, then load a list of content async.
 Elements in the list use the `data-for={id}` attribute to bind the tooltip on hover.
 Since the tooltip has already scanned for data-tip these new elements will not trigger.
 
-One workaround for this is to trigger `ReactTooltip.rebuild()` after the data load to scan for the attribute again, 
+One workaround for this is to trigger `ReactTooltip.rebuild()` after the data load to scan for the attribute again,
 to allow event wireup.
 
 #### Example
@@ -201,7 +203,7 @@ to allow event wireup.
 ```jsx
 <app>
   <ReactTooltip id="foo" />
-  <list/>
+  <list />
 </app>
 ```
 
