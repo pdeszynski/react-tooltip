@@ -1,5 +1,5 @@
 {
-  "name": "react-tooltip2",
+  "name": "react-tooltip-rc",
   "version": "4.3.0",
   "description": "react tooltip component",
   "main": "dist/index.js",
