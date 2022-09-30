@@ -1,4 +1,4 @@
-# react-tooltip
+# react-tooltip-rc
 
 [![Version](http://img.shields.io/npm/v/react-tooltip.svg)](https://www.npmjs.org/package/react-tooltip)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
@@ -25,6 +25,8 @@ Or see it on [Github Page](https://wwayne.github.io/react-tooltip).
 [roggervalf](https://github.com/roggervalf) Active maintainer - accepting PRs and doing minor testing, fixing issues or doing active development.
 
 [huumanoid](https://github.com/huumanoid) (inactive)
+
+[pdeszynski](https://github.com/pdeszynski) Just fixing stuff temprarily (hoping  not being chosen as a maintainer)
 
 We would gladly accept a new maintainer to help out!
 
