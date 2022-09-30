@@ -7,7 +7,10 @@
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
 
 [download-image]: https://img.shields.io/npm/dm/react-tooltip.svg?style=flat-square
-[download-url]: https://npmjs.org/package/react-tooltip
+[download-url]: https://npmjs.org/package/react-tooltip-rc
+
+**IMPORTANT**
+This is a fork of a `react-tooltip` library. Fork was created becuase it's not maintained right now and `react-tooltip` does not work with latest react updates (you probably heard of it - strict mode double dispatch of useEffect). There's a PR made, so probably after merge of https://github.com/wwayne/react-tooltip/pull/786 this fork **MIGHT cease to exist**
 
 ## Demo
 
