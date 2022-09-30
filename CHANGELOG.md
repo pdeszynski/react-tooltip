@@ -1,3 +1,9 @@
+## [4.3.3](https://github.com/pdeszynski/react-tooltip/compare/v4.3.2...v4.3.3) (2022-09-30)
+
+### Bug Fixes
+
+- **build:** added deployment user ([7fcb54b](https://github.com/pdeszynski/react-tooltip/commit/7fcb54b2d1e71ed6e531db3f907098235dbd610c))
+
 ## [4.3.2](https://github.com/pdeszynski/react-tooltip/compare/v4.3.1...v4.3.2) (2022-08-03)
 
 ### Bug Fixes
