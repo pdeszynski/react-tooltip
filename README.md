@@ -6,7 +6,7 @@
 [![Build Status](https://travis-ci.org/pdeszynski/react-tooltip-rc.svg?branch=master)](https://travis-ci.org/pdeszynski/react-tooltip-rc)
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
 
-[download-image]: https://img.shields.io/npm/dm/react-tooltip.svg?style=flat-square
+[download-image]: https://github.com/pdeszynski/react-tooltip/actions/workflows/release.yaml/badge.svg
 [download-url]: https://npmjs.org/package/react-tooltip-rc
 
 **IMPORTANT**
