@@ -1,3 +1,10 @@
+## [4.3.4](https://github.com/react-tooltip/react-tooltip/compare/v4.3.3...v4.3.4) (2022-10-02)
+
+### Bug Fixes
+
+- **readme:** corrected paths for organization ([9c5992a](https://github.com/react-tooltip/react-tooltip/commit/9c5992ae6e78f6230b99acfcb10c608493271930))
+- **readme:** dummy commit to force release ([8cc1ec2](https://github.com/react-tooltip/react-tooltip/commit/8cc1ec2dbb251da310362a375b8e78fc1a3c3319))
+
 ## [4.3.3](https://github.com/pdeszynski/react-tooltip/compare/v4.3.2...v4.3.3) (2022-09-30)
 
 ### Bug Fixes
