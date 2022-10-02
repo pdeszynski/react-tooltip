@@ -1,9 +1,9 @@
 # react-tooltip-rc
 
-[![Version](http://img.shields.io/npm/v/react-tooltip.svg)](https://www.npmjs.org/package/react-tooltip)
+[![Version](http://img.shields.io/npm/v/react-tooltip-rc.svg)](https://www.npmjs.org/package/react-tooltip-rc)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 [![npm download][download-image]][download-url]
-[![Build Status](https://travis-ci.org/wwayne/react-tooltip.svg?branch=master)](https://travis-ci.org/wwayne/react-tooltip)
+[![Build Status](https://travis-ci.org/pdeszynski/react-tooltip-rc.svg?branch=master)](https://travis-ci.org/pdeszynski/react-tooltip-rc)
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
 
 [download-image]: https://img.shields.io/npm/dm/react-tooltip.svg?style=flat-square
@@ -26,7 +26,7 @@ Or see it on [Github Page](https://wwayne.github.io/react-tooltip).
 
 [huumanoid](https://github.com/huumanoid) (inactive)
 
-[pdeszynski](https://github.com/pdeszynski) Just fixing stuff temprarily (hoping  not being chosen as a maintainer)
+[pdeszynski](https://github.com/pdeszynski) Just fixing stuff temporarily (hoping not being chosen as a maintainer)
 
 We would gladly accept a new maintainer to help out!
 
@@ -111,7 +111,7 @@ Notes:
 
 ### Security Note
 
-The `html` option allows a tooltip to directly display raw HTML. This is a security risk if any of that content is supplied by the user. Any user-supplied content must be sanitized, using a package like [sanitize-html](https://www.npmjs.com/package/sanitize-html). We chose not to include sanitization after discovering it [increased our package size](https://github.com/wwayne/react-tooltip/issues/429) too much - we don't want to penalize people who don't use the `html` option.
+The `html` option allows a tooltip to directly display raw HTML. This is a security risk if any of that content is supplied by the user. Any user-supplied content must be sanitized, using a package like [sanitize-html](https://www.npmjs.com/package/sanitize-html). We chose not to include sanitization after discovering it [increased our package size](https://github.com/pdeszynski/react-tooltip-rc/issues/429) too much - we don't want to penalize people who don't use the `html` option.
 
 #### JSX Note
 
@@ -166,7 +166,7 @@ import ReactTooltip from 'react-tooltip-rc'
 
 ### 1. Using tooltip within the modal (e.g. [react-modal](https://github.com/reactjs/react-modal))
 
-The component was designed to set `<ReactTooltip />` once and then use tooltip everywhere, but a lot of people get stuck when using this component in a modal. You can read the discussion [here](https://github.com/wwayne/react-tooltip/issues/130). To solve this problem:
+The component was designed to set `<ReactTooltip />` once and then use tooltip everywhere, but a lot of people get stuck when using this component in a modal. You can read the discussion [here](https://github.com/pdeszynski/react-tooltip-rc/issues/130). To solve this problem:
 
 1. Place `<ReactTooltip />` outside of the `<Modal>`
 2. Use `ReactTooltip.rebuild()` when opening the modal

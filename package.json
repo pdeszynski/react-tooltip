@@ -59,7 +59,7 @@
   },
   "dependencies": {
     "prop-types": "^15.8.1",
-    "uuid": "^8.3.2"
+    "uuid": "^9.0.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.18.10",
@@ -74,7 +74,7 @@
     "@commitlint/config-conventional": "^17.0.3",
     "@commitlint/travis-cli": "^17.0.3",
     "@rollup/plugin-commonjs": "^22.0.1",
-    "@rollup/plugin-node-resolve": "^13.3.0",
+    "@rollup/plugin-node-resolve": "^14.1.0",
     "@semantic-release/changelog": "^6.0.1",
     "@semantic-release/commit-analyzer": "^9.0.2",
     "@semantic-release/git": "^10.0.1",
@@ -119,7 +119,7 @@
     "npm-run-all": "^4.1.5",
     "postcss-nested": "^5.0.6",
     "postcss-scss": "^4.0.4",
-    "postcss-simple-vars": "^6.0.3",
+    "postcss-simple-vars": "^7.0.0",
     "prettier": "2.7.1",
     "pretty-quick": "^3.1.3",
     "react": "^18.2.0",
@@ -138,8 +138,8 @@
     "semantic-release": "^19.0.3",
     "snazzy": "^9.0.0",
     "standard": "^17.0.0",
-    "stylelint": "14.9.1",
-    "stylelint-config-standard": "26.0.0",
+    "stylelint": "14.13.0",
+    "stylelint-config-standard": "28.0.0",
     "uglifyjs": "^2.4.10",
     "watchify": "^4.0.0"
   },
