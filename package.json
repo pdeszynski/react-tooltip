@@ -12,7 +12,9 @@
   "scripts": {
     "test": "npm-run-all test:unit",
     "pretest": "npm-run-all pretty:quick lint:staged",
-    "eslint:fix": "./node_modules/.bin/eslint . --ignore-path ./.eslintignore --fix",
+    "lint": "npm-run-all eslint",
+    "eslint": "eslint . --ignore-path ./.eslintignore",
+    "eslint:fix": "yarn run eslint --fix",
     "pretty:quick": "./node_modules/.bin/pretty-quick --staged",
     "lint:staged": "./node_modules/.bin/lint-staged",
     "test:unit": "mocha --require @babel/register --require ignore-styles test/*.spec.js",
@@ -46,9 +48,9 @@
   "author": "wwayne",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/wwayne/react-tooltip/issues"
+    "url": "https://github.com/wwayne/react-tooltip-rc/issues"
   },
-  "homepage": "https://github.com/wwayne/react-tooltip#readme",
+  "homepage": "https://github.com/wwayne/react-tooltip-rc#readme",
   "browserify-shim": {
     "react": "global:React",
     "react-dom": "global:ReactDOM"

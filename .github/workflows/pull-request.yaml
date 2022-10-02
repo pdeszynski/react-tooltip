@@ -1,0 +1,10 @@
+name: Pull request workflow
+
+on:
+  push:
+    branches:
+      - '!master'
+  pull_request:
+
+jobs:
+  uses: pdeszynski/react-tooltip-rc/.github/workflows/lint.yml
