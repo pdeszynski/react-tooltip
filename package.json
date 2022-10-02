@@ -37,7 +37,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/pdeszynski/react-tooltip"
+    "url": "https://github.com/react-tooltip/react-tooltip"
   },
   "keywords": [
     "react",
@@ -48,9 +48,9 @@
   "author": "wwayne",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/wwayne/react-tooltip-rc/issues"
+    "url": "https://github.com/react-tooltip/react-tooltip/issues"
   },
-  "homepage": "https://github.com/wwayne/react-tooltip-rc#readme",
+  "homepage": "https://github.com/react-tooltip/react-tooltip#readme",
   "browserify-shim": {
     "react": "global:React",
     "react-dom": "global:ReactDOM"
