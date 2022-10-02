@@ -21,7 +21,7 @@ jobs:
     needs: lint
     strategy:
       matrix:
-        version: [12, 14, 16, 18]
+        version: [14, 16, 18]
     runs-on: ubuntu-latest
     environment: production
     steps:
