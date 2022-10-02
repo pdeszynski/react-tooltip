@@ -8,4 +8,4 @@ on:
 
 jobs:
   lint:
-    uses: pdeszynski/react-tooltip/.github/workflows/lint.yml
+    uses: ./.github/workflows/lint.yaml
