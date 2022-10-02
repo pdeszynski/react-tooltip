@@ -7,4 +7,5 @@ on:
   pull_request:
 
 jobs:
-  uses: pdeszynski/react-tooltip/.github/workflows/lint.yml
+  lint:
+    uses: pdeszynski/react-tooltip/.github/workflows/lint.yml
