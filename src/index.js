@@ -48,6 +48,8 @@ class ReactTooltip extends React.Component {
       backgroundColor: PropTypes.string,
       borderColor: PropTypes.string,
       arrowColor: PropTypes.string,
+      arrowRadius: PropTypes.string,
+      tooltipRadius: PropTypes.string,
       insecure: PropTypes.bool,
       class: PropTypes.string,
       className: PropTypes.string,
@@ -98,6 +100,7 @@ class ReactTooltip extends React.Component {
       show: false,
       border: false,
       customColors: {},
+      customRadius: {},
       offset: {},
       padding: props.padding,
       extraClass: '',
@@ -141,7 +144,7 @@ class ReactTooltip extends React.Component {
    * For unify the bind and unbind listener
    */
   bind(methodArray) {
-    methodArray.forEach(method => {
+    methodArray.forEach((method) => {
       this[method] = this[method].bind(this);
     });
   }
@@ -158,7 +161,7 @@ class ReactTooltip extends React.Component {
   static getDerivedStateFromProps(nextProps, prevState) {
     const { ariaProps } = prevState;
     const newAriaProps = parseAria(nextProps);
-    const isChanged = Object.keys(newAriaProps).some(props => {
+    const isChanged = Object.keys(newAriaProps).some((props) => {
       return newAriaProps[props] !== ariaProps[props];
     });
     if (!isChanged) {
@@ -254,8 +257,8 @@ class ReactTooltip extends React.Component {
 
     // Scan document for shadow DOM elements
     nodeListToArray(document.getElementsByTagName('*'))
-      .filter(element => element.shadowRoot)
-      .forEach(element => {
+      .filter((element) => element.shadowRoot)
+      .forEach((element) => {
         targetArray = targetArray.concat(
           nodeListToArray(element.shadowRoot.querySelectorAll(selector))
         );
@@ -273,7 +276,7 @@ class ReactTooltip extends React.Component {
     const { id, globalEventOff, isCapture } = this.props;
     const targetArray = this.getTargetArray(id);
 
-    targetArray.forEach(target => {
+    targetArray.forEach((target) => {
       if (target.getAttribute('currentItem') === null) {
         target.setAttribute('currentItem', 'false');
       }
@@ -286,7 +289,7 @@ class ReactTooltip extends React.Component {
     if (this.isBodyMode()) {
       this.bindBodyListener(targetArray);
     } else {
-      targetArray.forEach(target => {
+      targetArray.forEach((target) => {
         const isCaptureMode = this.isCapture(target);
         const effect = this.getEffect(target);
         if (this.isCustomEvent(target)) {
@@ -327,7 +330,7 @@ class ReactTooltip extends React.Component {
       this.unbindBodyListener();
     } else {
       const targetArray = this.getTargetArray(id);
-      targetArray.forEach(target => {
+      targetArray.forEach((target) => {
         this.unbindBasicListener(target);
         if (this.isCustomEvent(target)) this.customUnbindListener(target);
       });
@@ -389,7 +392,7 @@ class ReactTooltip extends React.Component {
     if (isGlobalCall) {
       // Don't trigger other elements belongs to other ReactTooltip
       const targetArray = this.getTargetArray(this.props.id);
-      const isMyElement = targetArray.some(ele => ele === e.currentTarget);
+      const isMyElement = targetArray.some((ele) => ele === e.currentTarget);
       if (!isMyElement) return;
     }
     // Get the tooltip content
@@ -487,6 +490,16 @@ class ReactTooltip extends React.Component {
               target.getAttribute('data-arrow-color') ||
               self.props.arrowColor ||
               null
+          },
+          customRadius: {
+            tooltip:
+              target.getAttribute('data-tooltip-radius') ||
+              self.props.tooltipRadius ||
+              '3',
+            arrow:
+              target.getAttribute('data-arrow-radius') ||
+              self.props.arrowRadius ||
+              '0'
           },
           effect: effect,
           offset: offset,
@@ -641,7 +654,7 @@ class ReactTooltip extends React.Component {
     if (hasTarget) {
       // Don't trigger other elements belongs to other ReactTooltip
       const targetArray = this.getTargetArray(this.props.id);
-      const isMyElement = targetArray.some(ele => ele === e.currentTarget);
+      const isMyElement = targetArray.some((ele) => ele === e.currentTarget);
       if (!isMyElement || !this.state.show) return;
     }
 
@@ -703,14 +716,8 @@ class ReactTooltip extends React.Component {
 
   // Calculation the position
   updatePosition(callbackAfter) {
-    const {
-      currentEvent,
-      currentTarget,
-      place,
-      desiredPlace,
-      effect,
-      offset
-    } = this.state;
+    const { currentEvent, currentTarget, place, desiredPlace, effect, offset } =
+      this.state;
     const node = this.tooltipRef;
     const result = getPosition(
       currentEvent,
@@ -773,7 +780,7 @@ class ReactTooltip extends React.Component {
   hasCustomColors() {
     return Boolean(
       Object.keys(this.state.customColors).find(
-        color => color !== 'border' && this.state.customColors[color]
+        (color) => color !== 'border' && this.state.customColors[color]
       ) ||
         (this.state.border && this.state.customColors['border'])
     );
@@ -788,7 +795,8 @@ class ReactTooltip extends React.Component {
       this.state.customColors,
       this.state.type,
       this.state.border,
-      this.state.padding
+      this.state.padding,
+      this.state.customRadius
     );
 
     const tooltipClass =
@@ -818,7 +826,7 @@ class ReactTooltip extends React.Component {
         <Wrapper
           className={`${wrapperClassName}`}
           id={this.props.id || uuid}
-          ref={ref => (this.tooltipRef = ref)}
+          ref={(ref) => (this.tooltipRef = ref)}
           {...ariaProps}
           data-id="tooltip"
           dangerouslySetInnerHTML={{ __html: htmlContent }}
@@ -830,7 +838,7 @@ class ReactTooltip extends React.Component {
           className={`${wrapperClassName}`}
           id={this.props.id || uuid}
           {...ariaProps}
-          ref={ref => (this.tooltipRef = ref)}
+          ref={(ref) => (this.tooltipRef = ref)}
           data-id="tooltip"
         >
           <style
