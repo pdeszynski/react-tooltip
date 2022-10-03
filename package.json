@@ -133,6 +133,7 @@
     "mocha-each": "^2.0.1",
     "mocha-jsdom": "^2.0.0",
     "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.17",
     "postcss-nested": "^5.0.6",
     "postcss-scss": "^4.0.4",
     "postcss-simple-vars": "^7.0.0",
