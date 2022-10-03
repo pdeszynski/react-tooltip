@@ -1,3 +1,9 @@
+## [4.3.5](https://github.com/react-tooltip/react-tooltip/compare/v4.3.4...v4.3.5) (2022-10-03)
+
+### Bug Fixes
+
+- **ci:** run build before release ([9b3fcff](https://github.com/react-tooltip/react-tooltip/commit/9b3fcffdec29cbe21c119944d3ae6a36457eaa1c))
+
 ## [4.3.4](https://github.com/react-tooltip/react-tooltip/compare/v4.3.3...v4.3.4) (2022-10-02)
 
 ### Bug Fixes
