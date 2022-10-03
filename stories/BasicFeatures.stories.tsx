@@ -1,6 +1,6 @@
 import { ComponentMeta } from '@storybook/react';
 import React from 'react';
-import ReactTooltip from '../index';
+import ReactTooltip from '../src/index';
 
 import { Page } from './Page';
 
