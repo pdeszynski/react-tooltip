@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import ReactTooltip from 'react-tooltip';
+import ReactTooltip from 'react-tooltip-rc';
 
 export default class App extends Component {
   constructor(props) {
